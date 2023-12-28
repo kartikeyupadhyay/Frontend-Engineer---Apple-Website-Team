@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="img/logo.png" class="logo" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Explore & Experience<br /></h2>
+          <h3>Innovation Redefined, Exclusively at <span>Apple</span></h3>
+          <br />
+
+          <p>
+            Welcome to our Apple Store, where Innovation meets Elegance! Embark
+            on a journey through cutting-edge technology curated for enthusiasts
+            like yourself. Navigate our user-friendly online store and discover
+            the perfect device to enhance your digital lifestyle. Immerse
+            yourself in the excellence of innovation and own a piece of the
+            future at our Apple Store.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <h2 style="color: #2e7289" class="name">iPhone 13 Pro Max</h2>
+          <img src="img/bluePhone.png" class="hero" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="img/bluePhone.png"
+            onclick="imgSlider('img/bluePhone.png'); changeCircleColor('#2e7289'); figureName('iPhone 13 Pro Max')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/greenPhone.png"
+            onclick="imgSlider('img/greenPhone.png'); changeCircleColor('#074216'); figureName('iPhone 13')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/airpods.png"
+            onclick="imgSlider('img/airpods.png'); changeCircleColor('#000000'); figureName('Airpods Pro')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/blackMonitor.png"
+            onclick="imgSlider('img/blackMonitor.png'); changeCircleColor('#4b4f4b'); figureName('iMac Black')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/whiteMonitor.png"
+            onclick="imgSlider('img/whiteMonitor.png'); changeCircleColor('#675f5f'); figureName('iMac White')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/pinkWatch.png"
+            onclick="imgSlider('img/pinkWatch.png'); changeCircleColor('#ee4c65'); figureName('Apple Watch Pink')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/blackiPad.png"
+            onclick="imgSlider('img/blackiPad.png'); changeCircleColor('#4b4f4b'); figureName('iPad Pro')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/pinkMac.png"
+            onclick="imgSlider('img/pinkMac.png'); changeCircleColor('#b76e79'); figureName('Macbook Rose Gold')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/goldMac.png"
+            onclick="imgSlider('img/goldMac.png'); changeCircleColor('#8c7805'); figureName('Macbook Gold')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="img/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".hero").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        const name = document.querySelector(".imgBox .name");
+
+        circle.style.background = color;
+        name.style.color = color;
+      }
+
+      function figureName(figname) {
+        const name = document.querySelector(".imgBox .name");
+        name.textContent = figname;
+      }
+    </script>
+  </body>
+</html>
